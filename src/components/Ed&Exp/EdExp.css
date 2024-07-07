@@ -1,0 +1,30 @@
+.edexp{
+    font-family: 'Cabin';
+    /* background: linear-gradient(#0A0016 0%, #2C0041 100%); */
+    background-image: url('./assets/bg.png');
+    background-size: cover;
+    color: white;
+    padding: 50px 4vw 100px 4vw;
+}
+
+
+.portfoliohead{
+    text-align: center;
+}
+
+.portfoliohead > h1{
+    font-size: 4em;
+}
+
+.portfoliohead > p{
+    font-size: 1.5em;
+}
+
+.timelines{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 15vw;
+
+    margin-top: 100px;
+}

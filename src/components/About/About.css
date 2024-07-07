@@ -1,0 +1,47 @@
+.about{
+    background-color: var(--white);
+    height: 50vh;
+    margin-top: -1px;
+
+    padding: 0 4vw;
+    font-family: 'Cabin';
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--primary);
+}
+
+.aboutLeft > h1{
+    font-size: 4em;
+    letter-spacing: 2px;
+}
+.aboutLeft > p{
+    margin-top: -10px;
+    font-size: 1.2em;
+}
+
+.aboutButtons{
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.aboutButtons > button{
+    background-color: var(--primary);
+    color: white;
+}
+
+.aboutRight{
+    width: 50%;
+}
+
+.aboutRight > p{
+    font-size: 1.2em;
+    text-align: justify;
+}
+
+.sign{
+    width: 200px;
+    transform: rotateZ(7deg);
+}

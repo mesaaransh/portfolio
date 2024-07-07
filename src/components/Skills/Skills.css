@@ -1,0 +1,113 @@
+.skills{
+    background-color: var(--white);
+    font-family: 'Cabin';
+    padding: 50px 4vw 100px 4vw;
+}
+
+.skills > p{
+    font-size: 1.5em;
+}
+.skills > h1{
+    font-size: 4em;
+}
+
+.skillSelector{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px 50px;
+    margin-top: 30px;
+}
+
+.skillSelector > h4{
+    cursor: pointer;
+    transition-duration: 200ms;
+}
+
+.skillSelector > h4:hover{
+    color: var(--primary);
+}
+
+.skillSelector:hover > h4:not(:hover){
+    filter: opacity(50%);
+}
+
+.skillSection{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px 6vw;
+    margin-top: 50px;
+}
+
+.skill{
+    height: 80px;
+    aspect-ratio: 1;
+    /* background-color: teal; */
+    object-fit: cover;
+    object-position: top;
+}
+
+.react{
+    height: max-content;
+    width: max-content;
+    position: relative;
+}
+
+.react:hover::after{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    content: 'Javascript';
+    font-family: 'Cabin';
+    padding: 7px 20px;
+    border-radius: 10px;
+    background-color: white;
+    top: 90%;
+    left: 20%;
+    animation-name: appear;
+    animation-duration: 100ms;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes appear {
+    from { opacity: 0; }
+    to  { opacity: 1; } 
+}
+
+.react:hover::before{
+
+    position: absolute;
+    content: '';
+    padding: 10px 20px;
+    background-color: white;
+    top: 80%;
+    left: 30%;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    animation-name: appear;
+    animation-duration: 100ms;
+    animation-timing-function: ease-in-out;
+
+}
+
+
+
+.react-tooltip {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Cabin';
+    padding: 7px 20px;
+    border-radius: 10px;
+    background-color: white;
+    z-index: 10; /* Ensure the tooltip is above other elements */
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out; /* Add a smooth fade-in effect */
+}
+
+.react:hover .react-tooltip {
+    opacity: 1;
+}

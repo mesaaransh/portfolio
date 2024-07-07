@@ -1,0 +1,49 @@
+.projects{
+    font-family: 'Cabin';
+    background: linear-gradient(#0A0016 0%, #2C0041 100%);
+    color: white;
+    padding: 50px 4vw 100px 4vw;
+}
+
+.projects > p{
+    font-size: 1.5em;
+    color: var(--accent);
+}
+.projects > h1{
+    font-size: 4em;
+}
+
+.project{
+    border: 3px solid var(--accent);
+    padding: 20px;
+    text-align: justify;
+
+    margin-top: 50px;
+}
+
+.project > h2{
+    margin-bottom: 10px;
+}
+
+.project > p{
+    font-weight: 100;
+}
+
+.projectButtons{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.projectLinks{
+    display: flex;
+    gap: 10px;
+}
+
+.projectLinks > button{
+    font-size: 1em;
+}
+
+.projectLinks > button:nth-of-type(1){
+    background: linear-gradient(30deg, #FFA100 0%, #FF0F00 300%);
+}

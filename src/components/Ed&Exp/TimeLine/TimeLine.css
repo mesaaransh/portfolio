@@ -1,0 +1,75 @@
+.Education{
+    flex: 1;
+}
+
+.Education > h1{
+    font-size: 3em;
+}
+
+.timeLine{
+    margin-top: 40px;
+    display: flex;
+}
+
+.vertBar{
+    min-width: 4px;
+    border-radius: 10px;
+    background-color: var(--accent);
+}
+
+.portfolioCardCont{
+    /* width: 300px; */
+    margin-left: 20px;
+    /* background-color: teal; */
+}
+
+.portfolioCardCont:not(:nth-of-type(1)){
+    margin-top: 40px;
+}
+
+.portfolioCardCont > h4{
+    margin-left: 20px;
+}
+
+.portfolioCardCont > h4:nth-of-type(1){
+    color: var(--accent);
+    position: relative;
+}
+
+.portfolioCardCont > h4:nth-of-type(1)::before{
+    content: '';
+    position: absolute;
+    
+    background-color: var(--primary);
+    box-shadow: 0px 0px 0px 6px var(--accent) inset;
+    height: 25px;
+    aspect-ratio: 1;
+    
+    border-radius: 50px;
+    margin-left: -55px;
+}
+
+.portfolioCardCont > h4:nth-of-type(2){
+    font-weight: 100;
+    margin-top: 5px;
+}
+
+.portfolioCard{
+    margin-top: 20px;
+    background-color: var(--white);
+    color: var(--primary);
+
+    padding: 20px 20px ;
+    border-radius: 20px;
+
+    text-align: justify;
+}
+
+.portfolioCard > h4{
+    margin-bottom: 10px;
+}
+
+
+.portfolioCard > h5{
+    margin-top: 10px;
+}

@@ -1,0 +1,63 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    /* cursor: none; */
+}
+
+
+:root{
+    --accent: #00ff47;
+    --white: #EDDEFF;
+    --primary: #0A0017;
+}
+
+button{
+    transition-duration: 200ms;
+}
+button:hover{
+    transform: translateY(-5px);
+}
+
+button.button{
+
+    padding: 7px 30px;
+    border: 0px solid;
+    border-radius: 100px;
+    font-family: 'Cabin';
+    font-size: 1.1em;
+    cursor: pointer;
+
+}
+
+button.icon{
+    padding: 7px;
+    display: flex;
+    align-items: center;
+    
+    border: 0px solid;
+    border-radius: 100px;
+    font-size: 1.4em;
+    cursor: pointer;
+
+}
+
+button.button:hover{
+    transform: translateY('10px');
+}
+
+.twoButtons{
+    display: flex;
+    gap: 15px;
+}
+
+.twoButtons > button:nth-of-type(1){
+    background-color: var(--accent);
+    color: var(--primary);
+}
+
+.twoButtons > button:nth-of-type(2){
+    background-color: transparent;
+    border: 2px solid var(--accent);
+    color: var(--accent);
+}
