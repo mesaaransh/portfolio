@@ -1,7 +1,7 @@
 import { useGSAP } from "@gsap/react";
 import "./TimeLine.css";
 import gsap from "gsap";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 gsap.registerPlugin(useGSAP);
@@ -10,7 +10,6 @@ export default function TimeLine(props: any) {
 
     gsap.registerPlugin(ScrollTrigger);
     const edu: any = useRef(null)
-    const trig: any = useRef(null)
     useGSAP(
         () => {
             gsap.from('.portfolioCardCont', {

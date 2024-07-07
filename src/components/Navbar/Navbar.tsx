@@ -1,4 +1,3 @@
-import gsap from "gsap";
 import "./Navbar.css"
 
 export default function Navbar() {

@@ -54,7 +54,7 @@ export default function Skills() {
 
             <div className="skillSection">
                 {
-                    skills.map((skill, index) => (
+                    skills.map((skill) => (
                         <>  
                             <div className={skill.split('/')[5].split('.')[0]}>
                                 <img src={skill} alt={skill.split('/')[5].split('.')[0]} className="skill" />
