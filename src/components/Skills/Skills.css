@@ -1,4 +1,5 @@
 .skills{
+    margin-top: -1px;
     background-color: var(--white);
     font-family: 'Cabin';
     padding: 50px 4vw 100px 4vw;
@@ -34,80 +35,19 @@
 }
 
 .skillSection{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 30px 6vw;
     margin-top: 50px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-gap: 50px 0px;
+
+    align-items: center;
+    justify-items: center;
 }
 
 .skill{
-    height: 80px;
+    height: 90px;
     aspect-ratio: 1;
-    /* background-color: teal; */
     object-fit: cover;
-    object-position: top;
-}
-
-.react{
-    height: max-content;
-    width: max-content;
-    position: relative;
-}
-
-.react:hover::after{
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    content: 'Javascript';
-    font-family: 'Cabin';
-    padding: 7px 20px;
-    border-radius: 10px;
-    background-color: white;
-    top: 90%;
-    left: 20%;
-    animation-name: appear;
-    animation-duration: 100ms;
-    animation-timing-function: ease-in-out;
-}
-
-@keyframes appear {
-    from { opacity: 0; }
-    to  { opacity: 1; } 
-}
-
-.react:hover::before{
-
-    position: absolute;
-    content: '';
-    padding: 10px 20px;
-    background-color: white;
-    top: 80%;
-    left: 30%;
-    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-    animation-name: appear;
-    animation-duration: 100ms;
-    animation-timing-function: ease-in-out;
-
-}
-
-
-
-.react-tooltip {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Cabin';
-    padding: 7px 20px;
-    border-radius: 10px;
-    background-color: white;
-    z-index: 10; /* Ensure the tooltip is above other elements */
-    opacity: 0;
-    transition: opacity 0.2s ease-in-out; /* Add a smooth fade-in effect */
-}
-
-.react:hover .react-tooltip {
-    opacity: 1;
+    object-position: center;
 }

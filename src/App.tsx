@@ -37,9 +37,9 @@ function App() {
     />
       <Navbar/>
       <Hero/>
-      <About/>
-      <EdExp/>
       <Skills/>
+      {/* <About/> */}
+      <EdExp/>
       <Projects/>
     </main>
   )

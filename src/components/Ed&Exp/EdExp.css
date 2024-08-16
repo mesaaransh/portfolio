@@ -24,7 +24,6 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-    gap: 15vw;
-
+    gap: 10vw;
     margin-top: 100px;
 }

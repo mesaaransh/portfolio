@@ -34,7 +34,7 @@ export default function Skills() {
         cs,
         numpy,
         opencv,
-        oracle
+        oracle,
     ];
 
     return (
@@ -43,21 +43,21 @@ export default function Skills() {
             <p>The tech I know</p>
             <h1>My Skills</h1>
 
-            <div className="skillSelector">
+            {/* <div className="skillSelector">
                 <h4>All</h4>
                 <h4>All Languages</h4>
                 <h4>Frontend Development</h4>
                 <h4>Backend Development</h4>
                 <h4>AI/ML</h4>
                 <h4>Databases</h4>
-            </div>
+            </div> */}
 
             <div className="skillSection">
                 {
                     skills.map((skill) => (
                         <>  
-                            <div className={skill.split('/')[5].split('.')[0]}>
-                                <img src={skill} alt={skill.split('/')[5].split('.')[0]} className="skill" />
+                            <div>
+                                <img src={skill} alt={skill} className="skill" />
                             </div>
                         </>
                     ))

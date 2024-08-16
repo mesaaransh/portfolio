@@ -46,9 +46,11 @@ export default function TimeLine(props: any) {
 
                             <div className="portfolioCard">
                                 <h4>{item.institute}</h4>
-                                <p>
-                                    {item.description}
-                                </p>
+                                <ul>
+                                    {item.description.map((pt: any) => {
+                                        return (<li>{pt}</li>)
+                                    })}
+                                </ul>
                                 {item.score?<h5>Grade Point: {item.score}</h5>:<></>}
                             </div>
                         </div>

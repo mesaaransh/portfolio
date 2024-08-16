@@ -1,20 +1,20 @@
 .projects{
     font-family: 'Cabin';
-    background: linear-gradient(#0A0016 0%, #2C0041 100%);
-    color: white;
+    background-color: var(--white);
+    color: black;
     padding: 50px 4vw 100px 4vw;
 }
 
 .projects > p{
     font-size: 1.5em;
-    color: var(--accent);
+    color: var(--primary);
 }
 .projects > h1{
     font-size: 4em;
 }
 
 .project{
-    border: 3px solid var(--accent);
+    border: 3px solid var(--primary);
     padding: 20px;
     text-align: justify;
 

@@ -6,15 +6,16 @@ import experience from "../../experience"
 export default function EdExp() {
   return (
     <div className="edexp">
-        <div className="portfoliohead">
+        {/* <div className="portfoliohead">
             <p>Personal Description</p>
             <h1>My Portfolio</h1>
-        </div>
+        </div> */}
         
         <div className="timelines">
-            <TimeLine head="Education" data={education}/>
             <TimeLine head="Experience" data={experience}/>
+            <TimeLine head="Education" data={education}/>
         </div>
+
     </div>
   )
 }
