@@ -1,0 +1,41 @@
+.about{
+    background-color: var(--primary);
+}
+
+.aboutphoto{
+    min-width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.aboutphoto > .photo{
+    width: 250px;
+    aspect-ratio: 1;
+    background-color: var(--accent);
+    border-radius: 1000px;
+}
+
+.aboutcontent{
+    margin-bottom: 100px;
+}
+
+.aboutcontent > *{
+    color: var(--white);
+}
+
+.aboutfocus{
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 0px;
+    margin-bottom: 60px;
+}
+
+.focusitem > h2{
+    color: var(--accent);
+}
+
+.focusitem > p{
+    color: var(--white);
+}
+

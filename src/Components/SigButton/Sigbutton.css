@@ -1,0 +1,55 @@
+.sigbutton{
+
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    height: fit-content;
+
+    background-color: var(--accent);
+    border: 0px solid black;
+    border-radius: 200px;
+    padding: 5px;
+
+    gap: 15px;
+    
+}
+
+.sigbutton > button:nth-of-type(1){
+    
+    font-size: 1.2em;
+    text-wrap: nowrap;
+    background-color: var(--primary);
+    border: 0px solid black;
+    border-radius: 200px;
+    padding: 0px 25px;
+
+    height: 45px;
+    
+    color: var(--white);
+    transition-duration: 200ms;
+}
+
+.sigbutton:hover > button:nth-of-type(1){
+
+    padding: 0px 35px;
+
+}
+
+.sigbutton > button:nth-of-type(2){
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 1.2em;
+    color: var(--primary);
+    
+    background-color: white;
+    border: 0px solid black;
+
+    margin-right: 2px;
+    
+    border-radius: 200px;
+    aspect-ratio: 1;
+    height: 40px;
+}

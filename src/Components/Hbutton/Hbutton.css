@@ -1,0 +1,13 @@
+.hbutton{
+
+    font-size: 1em;
+    font-weight: 600;
+    border-radius: 200px;
+
+    padding: 10px 30px;
+
+    color: var(--primary);
+    border: 2px solid var(--primary);
+    background-color: transparent;
+
+}

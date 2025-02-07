@@ -1,0 +1,118 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  color: rgb(19, 19, 19);
+  font-weight: 500;
+
+  color: inherit;
+}
+
+:root{
+
+  --primary: #344c36;
+  --primaryd: #253627;
+  --accent: #fca90f;
+  --accentd: #e69a0f;
+  --orange: #f73a00;
+  --blue: #0083da;
+  --white: #f7f7f7;
+  --whited: #ebebeb;
+  --whitedd: #e0e0e0;
+
+  --gray: #808080;
+
+}
+
+p{
+  font-weight: 400;
+}
+
+.wrapper{
+  padding: 0px 7vw;
+  padding-top: 90px;
+}
+
+.button{
+
+  padding: 10px 20px;
+  border-radius: 200px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+body{
+  background-color: var(--white);
+  overflow-x: hidden;
+}
+
+.flex{
+  display: flex;
+}
+
+button{
+  cursor: pointer;
+}
+
+.un {
+  display: inline-block;
+  padding-bottom: 2px;
+  background-image: linear-gradient(var(--accent) 0 0);
+  background-position: 0 100%; /*OR bottom left*/
+  background-size: 0% 1px;
+  background-repeat: no-repeat;
+  transition:
+    background-size 0.3s,
+    background-position 0s 0.3s; /*change after the size immediately*/
+}
+
+.un:hover {
+  background-position: 100% 100%; /*OR bottom right*/
+  background-size: 100% 1px;
+}
+
+.fill {
+  position: relative;
+  overflow: hidden;
+  transition-duration: 300ms;
+}
+
+.fill::before{
+  position: absolute;
+  top: -200%;
+  left: -100%;
+  content: '';
+  
+  height: 200%;
+  width: 100%;
+  
+  transform: rotate(25deg);
+  background-color: #253627;
+  transition-duration: 300ms;
+  transition-timing-function: ease-in-out;
+
+  z-index: -1;
+
+}
+
+.fill:hover:before{
+  position: absolute;
+  top: -50%;
+  left: 0;
+  content: '';
+
+  height: 200%;
+  width: 100%;
+
+  transform: rotate(25deg);
+  background-color: #253627;
+
+}
+
+.fill:hover {
+  color: white;
+}

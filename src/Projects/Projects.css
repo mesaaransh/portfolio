@@ -1,0 +1,94 @@
+.portfolio{
+
+    background-color: var(--whited);
+
+}
+
+.projecthead{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.projects{
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    gap: 50px 0px;
+    padding: 50px 0px;
+
+}
+
+.projects > .col{
+    flex-basis: calc(50% - 2vw);
+    display: flex;
+    flex-direction: column;
+
+    gap: 30px 0px;
+}
+
+.project{
+
+    display: flex;
+    flex-direction: column;
+    background-color: var(--white);
+    border: 1px solid var(--whitedd);
+    padding: 15px;
+    border-radius: 13px;
+
+    transition-duration: 300ms;
+    cursor: pointer;
+
+}
+
+.project:hover{
+
+    scale: 1.02;
+}
+
+.project > .image{
+
+    width: 100%;
+    height: 300px;
+    border-radius: 8px;
+    background-color: teal;
+
+}
+
+.project > .title{
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    padding: 10px 0px;
+    padding-top: 20px;
+
+}
+
+.project > p{
+
+    color: var(--gray);
+
+}
+
+.title > .flex{
+
+    gap: 10px;
+
+}
+
+.title > .flex > *{
+    cursor: pointer;
+    transition-duration: 100ms;
+}
+
+.title > .flex > *:hover:nth-of-type(1){
+    color: var(--orange);
+}
+
+.title > .flex > *:hover:nth-of-type(2){
+    color: var(--blue)
+}
