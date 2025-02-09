@@ -3,7 +3,7 @@ import About from './About/About'
 import Banner from './Banner/Banner'
 import Education from './Education/Education'
 import Hero from './Hero/Hero'
-import Navbar from './navbar/navbar'
+import Navbar from './Navbar/Navbar'
 import Projects from './Projects/Projects'
 import Skills from './Skills/Skills'
 
@@ -21,7 +21,6 @@ function App() {
           <Route path="/home" element={<Main />} />
         </Routes>
       </Router>
-
     </>
   )
 }
