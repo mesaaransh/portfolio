@@ -1,11 +1,6 @@
 import React from 'react'
-import "./hero.css"
+import "./Hero.css"
 import Sigbutton from '../Components/SigButton/Sigbutton'
-import Hbutton from '../Components/HButton/Hbutton'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
-import { faLinkedin } from '@fortawesome/free-brands-svg-icons/faLinkedin'
-import { faInstagram } from '@fortawesome/free-brands-svg-icons/faInstagram'
 
 export default function Hero() {
     return (
