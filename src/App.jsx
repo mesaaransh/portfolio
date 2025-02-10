@@ -14,7 +14,6 @@ function App() {
 
   return (
     <>
-
       <Router>
         <Routes>
           <Route path="/" element={<UC />} />
@@ -36,6 +35,7 @@ function Main() {
       <About />
       <Projects />
       <Education />
+      <Banner />
     </>
   )
 
