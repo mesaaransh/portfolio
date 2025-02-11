@@ -10,6 +10,7 @@ import Skills from './Skills/Skills'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import UC from './UC'
 import Contact from './Contact/Contact'
+import Footer from './Footer/Footer'
 
 function App() {
 
@@ -38,6 +39,7 @@ function Main() {
       <Education />
       <Banner />
       <Contact/>
+      <Footer/>
     </>
   )
 
