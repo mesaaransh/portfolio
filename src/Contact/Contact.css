@@ -1,0 +1,93 @@
+.contactMain{
+
+    margin-bottom: 50px;
+
+}
+
+.contact{
+    width: 40%;
+}
+
+.contact > p{
+    color: var(--gray);
+}
+
+.contacticons{
+
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 20px;
+    gap: 20px;
+
+}
+
+.contacticons > div{
+
+    gap: 10px;
+    align-items: center;
+
+    color: var(--gray);
+
+}
+
+.contacticons > div > .icon{
+
+    width: 60px;
+    font-size: 1.7em;
+    color: var(--white);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+.contactFormCont{
+
+    margin-left: 100px;
+    width: calc(60% - 100px);
+
+    margin-top: auto;
+    margin-bottom: auto;
+
+}
+
+.contactFrom{
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+    width: 100%;
+
+}
+
+.formrow{
+
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+}
+
+.formrow > input, textarea{
+
+    width: 100%;
+    padding: 15px;
+
+    outline: 0px solid;
+    border: 0px solid;
+    background-color: var(--whitedd);
+
+    margin-top: 5px;
+    border-radius: 5px;
+
+}
+
+.formrow > textarea{
+
+    height: 10lh;
+
+}
