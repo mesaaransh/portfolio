@@ -66,3 +66,28 @@
 .fade{
     opacity: 0.1;
 }
+
+
+@media only screen and (max-width: 992px){
+
+    .skillmenu{
+
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 20px;
+
+    }
+
+    .skillmenu > *{
+        cursor: pointer;
+        background-color: var(--accent);
+        padding: 10px 20px;
+
+        border-radius: 50px;
+    }
+
+    .skill{
+        height: 70px;
+    }
+
+}

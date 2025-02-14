@@ -1,3 +1,10 @@
+.hero{
+
+    display: flex;
+    flex-direction: row;
+
+}
+
 .herointro{
     width: 40%;
     display: flex;
@@ -110,4 +117,24 @@
     gap: 5px;
     display: flex;
     flex-direction: column;
+}
+
+
+
+@media only screen and (max-width: 992px) {
+
+    .hero{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .herophoto{
+        background-color: green;
+        width: 100%;
+    }
+
+    .herointro{
+        width: 100%;
+    }
+
 }

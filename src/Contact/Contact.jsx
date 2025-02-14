@@ -7,7 +7,7 @@ import Sigbutton from "../Components/SigButton/Sigbutton"
 
 export default function Contact() {
     return (
-        <div className="wrapper flex contactMain">
+        <div className="wrapper contactMain">
 
             <div className='contact'>
                 <h3 className='subhead'>Contact Us</h3>

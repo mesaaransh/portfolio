@@ -63,10 +63,13 @@
 .navbutton{
 
     height: 100%;
+    cursor: pointer;
 
     display: flex;
     align-items: center;
     justify-content: center;
+
+    transition-duration: 200ms;
 
     margin-left: auto;
 
@@ -78,4 +81,8 @@
     color: var(--primary);
     background-color: var(--white);
 
+}
+
+.navbutton:hover{
+    padding: 0px 45px;
 }

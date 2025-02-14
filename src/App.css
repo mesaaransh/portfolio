@@ -26,6 +26,12 @@
 
 }
 
+@media only screen and (max-width: 992px){
+  body{
+    font-size: 10pt;
+  }
+}
+
 p{
   font-weight: 400;
 }

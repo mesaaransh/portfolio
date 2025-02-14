@@ -4,7 +4,7 @@ import Sigbutton from '../Components/SigButton/Sigbutton'
 
 export default function Hero() {
     return (
-        <div className='wrapper flex'>
+        <div className='wrapper hero'>
             <div className="herointro">
                 <h4 className='square'>
                     <div className="insquare"></div>

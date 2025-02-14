@@ -1,6 +1,7 @@
 .contactMain{
 
     margin-bottom: 50px;
+    display: flex;
 
 }
 
@@ -89,5 +90,28 @@
 .formrow > textarea{
 
     height: 10lh;
+
+}
+
+@media only screen and (max-width: 992px){
+
+    .contactMain{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact{
+        width: 100%;
+    }
+
+    .contactFormCont{
+        width: 100%;
+        margin: 0px;
+        margin-top: 50px;
+    }
+
+    .contacticons{
+        display: none;
+    }
 
 }

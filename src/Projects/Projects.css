@@ -92,3 +92,30 @@
 .title > .flex > *:hover:nth-of-type(2){
     color: var(--blue)
 }
+
+.projects > button{
+    display: none;
+}
+
+@media only screen and (max-width: 992px){
+
+    .projecthead > button{
+        display: none;
+    }
+
+    .projects{
+        flex-wrap: wrap;
+    }
+
+    .projects > button{
+        display: flex;
+        margin-left: auto;
+    }
+
+    .projects > .col{
+
+        flex: 100%;
+
+    }
+
+}

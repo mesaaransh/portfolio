@@ -25,18 +25,25 @@ export default function Projects() {
             <div className="projects">
 
                 <div className="col">
-                    <Project/>
-                    <Project/>
+                    <Project />
+                    <Project />
                 </div>
                 <div className="col">
-                    <Project/>
-                    <Project/>
+                    <Project />
+                    <Project />
                 </div>
+
+                <Sigbutton text={'View More'} />
             </div>
 
         </div>
     )
 }
+
+
+
+
+
 
 function Project() {
 
