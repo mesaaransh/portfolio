@@ -14,7 +14,7 @@ export default function Contact() {
                 <h1 className='head'>Let's Talk for <em> Your <br /> Next Projects </em> </h1>
 
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. <br />
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Fugit necessitatibus labore voluptas.
                 </p>
 

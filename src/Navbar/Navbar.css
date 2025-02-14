@@ -96,7 +96,7 @@
 @media only screen and (max-width: 992px){
 
     .navbar{
-        width: calc(100% - 8vw);
+        width: calc(90vw);
     }
 
     .navmenu, .navcontact{
