@@ -95,12 +95,17 @@
 
 @media only screen and (max-width: 992px){
 
+    .navbar{
+        width: calc(100% - 8vw);
+    }
+
     .navmenu, .navcontact{
         display: none;
     }
-    
+
     .navham{
         display: flex;
+        padding: 0px 20px;
     }
 
 }
