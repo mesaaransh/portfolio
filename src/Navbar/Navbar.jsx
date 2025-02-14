@@ -1,5 +1,7 @@
 import React from 'react'
 import "./Navbar.css"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHamburger } from '@fortawesome/free-solid-svg-icons/faHamburger'
 
 export default function Navbar() {
   return (
@@ -15,8 +17,12 @@ export default function Navbar() {
             <li className='un'>Experience</li>
         </menu>
 
-        <div className="navbutton">
+        <div className="navbutton navcontact">
             Contact Me
+        </div>
+
+        <div className="navbutton navham">
+          <FontAwesomeIcon icon={faHamburger} />
         </div>
     </div>
   )
