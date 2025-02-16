@@ -5,6 +5,7 @@ import { faStarOfLife } from '@fortawesome/free-solid-svg-icons'
 
 export default function Banner() {
   return (
+    <>
     <div className='banner'>
 
       <marquee behavior="scroll" direction="left" className='bannerFont'>
@@ -22,5 +23,6 @@ export default function Banner() {
       </marquee>
 
     </div>
+    </>
   )
 }

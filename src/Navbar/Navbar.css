@@ -87,7 +87,7 @@
     padding: 0px 45px;
 }
 
-.navham{
+.phone{
     display: none;
     font-size: 18pt;
 }
@@ -95,19 +95,20 @@
 
 @media only screen and (max-width: 992px){
 
-    .navbar{
-        width: calc(100% - 10vw);
-        left: 0px;
-        transform: unset;
+    body{   
+        overflow-x: hidden;
     }
 
-    .navmenu, .navcontact{
+    .navbar{
+        width: calc(100% - 10vw);
+    }
+
+    .navmenu, .wide{
         display: none;
     }
 
-    .navham{
+    .phone{
         display: flex;
-        padding: 0px 20px;
     }
 
 }
