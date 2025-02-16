@@ -1,5 +1,6 @@
 import React from 'react'
 import "./Hero.css"
+import bot from "./assets/bot.png"
 import Sigbutton from '../Components/SigButton/Sigbutton'
 
 export default function Hero() {
@@ -40,9 +41,9 @@ export default function Hero() {
                     </div> */}
                 </div>
             </div>
-
+            
             <div className="herophoto">
-
+                <img className='' src={bot} alt=""/>
             </div>
         </div>
     )

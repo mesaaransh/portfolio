@@ -1,5 +1,6 @@
 import React from 'react'
 import "./About.css"
+import me from "./assets/me2.png"
 import Sigbutton from '../Components/SigButton/Sigbutton'
 
 export default function About() {
@@ -11,7 +12,7 @@ export default function About() {
 
         <div className='aboutphoto'>
           <div className="photo">
-            
+            <img src={me} alt="" />
           </div>
         </div>
 

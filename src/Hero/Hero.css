@@ -97,10 +97,29 @@
 }
 
 .herophoto{
-    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     margin-left: auto;
     width: 40%;
-    height: 10px;
+}
+
+.herophoto > img{
+    height: 400px;
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-30px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
 }
 
 .heroicon{
@@ -129,7 +148,7 @@
     }
 
     .herophoto{
-        background-color: green;
+        display: none;
         width: 100%;
     }
 
