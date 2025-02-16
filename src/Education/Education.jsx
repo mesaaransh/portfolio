@@ -5,7 +5,7 @@ import { faBriefcase } from "@fortawesome/free-solid-svg-icons/faBriefcase"
 
 export default function Education() {
     return (
-        <div className="wrapper">
+        <div className="wrapper" id="education">
             <div className="eduhead">
                 <h3 className="subhead">Work & Expereience</h3>
                 <h1 className='head'>My <em>Academic and <br /> Professional</em> Journey</h1>

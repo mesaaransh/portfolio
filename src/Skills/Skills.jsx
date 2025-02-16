@@ -68,7 +68,7 @@ export default function Skills() {
     }
 
     return (
-        <div className='wrapper'>
+        <div className='wrapper' id='skills'>
 
             <h3 className='subhead'>
                 Skills

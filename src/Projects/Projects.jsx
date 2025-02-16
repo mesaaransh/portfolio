@@ -7,7 +7,7 @@ import { faPlay } from '@fortawesome/free-solid-svg-icons'
 
 export default function Projects() {
     return (
-        <div className='wrapper portfolio'>
+        <div className='wrapper portfolio' id='portfolio'>
 
             <div className="projecthead">
 

@@ -49,7 +49,7 @@ export default function Contact() {
     }
 
     return (
-        <div className="wrapper contactMain">
+        <div className="wrapper contactMain" id="contact">
 
             <div className='contact'>
                 <h3 className='subhead'>Contact Us</h3>
