@@ -15,8 +15,10 @@
   --primaryd: #253627;
   --accent: #fca90f;
   --accentd: #e69a0f;
+
   --orange: #f73a00;
   --blue: #0083da;
+
   --white: #f7f7f7;
   --whited: #ebebeb;
   --whitedd: #e0e0e0;
@@ -24,6 +26,11 @@
 
   --gray: #808080;
 
+}
+
+body{
+  width: 100vw;
+  overflow-x: hidden;
 }
 
 @media only screen and (max-width: 992px){

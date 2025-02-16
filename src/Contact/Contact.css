@@ -93,6 +93,12 @@
 
 }
 
+.contactSubmit{
+    border: 0px solid;
+    background-color: transparent;
+    width: fit-content;
+}
+
 @media only screen and (max-width: 992px){
 
     .contactMain{
