@@ -24,7 +24,7 @@ export default function About() {
           <h1 className='head'>Who is <em>Saaransh Gupta?</em></h1>
 
           <p>
-          Passionate problem-solver, full-stack developer, and AI enthusiast who thrives on building intuitive digital experiences and pushing creative boundaries.
+            Passionate problem-solver, full-stack developer, and AI enthusiast who thrives on building intuitive digital experiences and pushing creative boundaries.
           </p>
 
           <div className="aboutfocus">
@@ -44,7 +44,9 @@ export default function About() {
             </div>
           </div>
 
-          <Sigbutton text={'View My Resume'}/>
+          <a className="contactSubmit" href='/resume.pdf' target='_blank'>
+            <Sigbutton text={'View My Resume'} />
+          </a>
 
         </div>
       </div>

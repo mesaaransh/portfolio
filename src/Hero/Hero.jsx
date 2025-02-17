@@ -2,8 +2,15 @@ import React from 'react'
 import "./Hero.css"
 import bot from "./assets/bot.png"
 import Sigbutton from '../Components/SigButton/Sigbutton'
+import { useNavigate } from 'react-router-dom'
 
 export default function Hero() {
+
+    var navigator = useNavigate();
+    function resumeRedirect() {
+        navigator('/resume.pdf')
+    }
+
     return (
         <div className='wrapper hero' id='hero'>
             <div className="herointro">
@@ -19,13 +26,14 @@ export default function Hero() {
 
                 <p>Building scalable solutions, crafting immersive experiences, and innovating with AI-driven full-stack development.</p>
 
-                <div className='flex' style={{gap: '20px'}}>
-                    <Sigbutton text={'View My Resume'}/>
-                </div>
+                <a className="contactSubmit" href='/resume.pdf' target='_blank'>
+                    <Sigbutton text={'View My Resume'} />
+                </a>
+
             </div>
-            
+
             <div className="herophoto">
-                <img className='' src={bot} alt=""/>
+                <img className='' src={bot} alt="" />
             </div>
         </div>
     )

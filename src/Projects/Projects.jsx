@@ -4,8 +4,12 @@ import Sigbutton from '../Components/SigButton/Sigbutton'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { faPlay } from '@fortawesome/free-solid-svg-icons'
+import projectlist from './projectlist'
 
 export default function Projects() {
+
+    let projects = projectlist;
+
     return (
         <div className='wrapper portfolio' id='portfolio'>
 
@@ -18,19 +22,31 @@ export default function Projects() {
                     <h1 className='head'>My Latest <em>Projects</em></h1>
                 </div>
 
-                <Sigbutton text={'View More'} />
+                <a className="contactSubmit" href='https://www.github.com/mesaaransh' target='_blank'>
+                    <Sigbutton text={'View More'} />
+                </a>
 
             </div>
 
             <div className="projects">
 
                 <div className="col">
-                    <Project />
-                    <Project />
+                    {
+                        projects.map((project, i) => (
+                            i % 2 == 0 ?
+                                <Project name={project.name} description={project.description} /> :
+                                <></>
+                        ))
+                    }
                 </div>
                 <div className="col">
-                    <Project />
-                    <Project />
+                    {
+                        projects.map((project, i) => (
+                            i % 2 != 0 ?
+                                <Project name={project.name} description={project.description} /> :
+                                <></>
+                        ))
+                    }
                 </div>
 
                 <Sigbutton text={'View More'} />
@@ -41,11 +57,7 @@ export default function Projects() {
 }
 
 
-
-
-
-
-function Project() {
+function Project({ name, description }) {
 
     return (
         <div className="project">
@@ -53,14 +65,16 @@ function Project() {
 
             </div>
             <h2 className="title">
-                Smart Lost & Found
+                {name}
                 <div className='flex'>
                     <FontAwesomeIcon icon={faGithub} />
                     <FontAwesomeIcon icon={faPlay} />
                 </div>
             </h2>
 
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente necessitatibus nobis nihil tenetur optio nesciunt quam enim quaerat labore eveniet.</p>
+            <p>
+                {description}
+            </p>
         </div>
 
     )
