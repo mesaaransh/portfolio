@@ -17,28 +17,10 @@ export default function Hero() {
                     Based in Punjab.
                 </h1>
 
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt corrupti deserunt officiis, odit optio aliquid.</p>
+                <p>Building scalable solutions, crafting immersive experiences, and innovating with AI-driven full-stack development.</p>
 
                 <div className='flex' style={{gap: '20px'}}>
                     <Sigbutton text={'View My Resume'}/>
-                    {/* <div className="heroicon">
-                        <div>
-                            <FontAwesomeIcon icon={faGithub} />
-                            <FontAwesomeIcon icon={faLinkedinIn} />
-                        </div>
-                        <div>
-                            <FontAwesomeIcon icon={faLinkedinIn} />
-                            <FontAwesomeIcon icon={faGithub} />
-                        </div>
-                        <div>
-                            <FontAwesomeIcon icon={faInstagram} />
-                            <FontAwesomeIcon icon={faGithub} />
-                        </div>
-                        <div>
-                            <FontAwesomeIcon icon={faGithub} />
-                            <FontAwesomeIcon icon={faGithub} />
-                        </div>
-                    </div> */}
                 </div>
             </div>
             

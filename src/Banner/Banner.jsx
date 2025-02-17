@@ -9,17 +9,17 @@ export default function Banner() {
     <div className='banner'>
 
       <marquee behavior="scroll" direction="left" className='bannerFont'>
-        <h3>Web Designer</h3>
+        <h3>Web Developer</h3>
         <FontAwesomeIcon icon={faStarOfLife} />
-        <h3>Web Designer</h3>
+        <h3>UI/UX Designer</h3>
         <FontAwesomeIcon icon={faStarOfLife} />
-        <h3>Web Designer</h3>
+        <h3>AI/ML Specialist</h3>
         <FontAwesomeIcon icon={faStarOfLife} />
-        <h3>Web Designer</h3>
+        <h3>Cloud Technologies</h3>
         <FontAwesomeIcon icon={faStarOfLife} />
-        <h3>Web Designer</h3>
+        <h3>Creative Engineer</h3>
         <FontAwesomeIcon icon={faStarOfLife} />
-        <h3>Web Designer</h3>
+        <h3>App Developer</h3>
       </marquee>
 
     </div>

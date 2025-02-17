@@ -97,6 +97,7 @@
 }
 
 .herophoto{
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -105,9 +106,53 @@
     width: 40%;
 }
 
+/* .herophoto::after{
+
+    content: 'UI/UX Designer';
+    padding: 5px 40px;
+    border-radius: 100px;
+    position: absolute;
+    bottom: 30%;
+    right: 0;
+
+    background-color: var(--accent);
+    animation: floatxy 8s ease-in-out infinite;
+    animation-delay: 1000ms;
+}
+
+.herophoto::before{
+
+    content: 'Web Developer';
+    color: var(--white);
+    padding: 5px 40px;
+    border-radius: 100px;
+    position: absolute;
+    top: 40%;
+    left: 0;
+
+    z-index: 100;
+
+    background-color: var(--primary);
+    animation: floatxy 8s ease-in-out infinite;
+    animation-delay: 500ms;
+}
+
+@keyframes floatxy {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-30px) translateX(-10px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+} */
+
 .herophoto > img{
     height: 400px;
-    animation: float 4s ease-in-out infinite;
+    animation: float 4.5s ease-in-out infinite;
+    filter: hue-rotate(-170deg) saturate(1);
 }
 
 @keyframes float {

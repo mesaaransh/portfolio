@@ -44,6 +44,8 @@
     justify-content: space-between;
     margin: 40px 0px;
     margin-bottom: 60px;
+
+    gap: 20px;
 }
 
 .focusitem > h2{

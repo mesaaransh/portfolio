@@ -24,24 +24,23 @@ export default function About() {
           <h1 className='head'>Who is <em>Saaransh Gupta?</em></h1>
 
           <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit qui ipsa blanditiis
-            dolorem alias neque id rem nemo quas dolorum. Lorem ipsum dolor sit amet.
+          Passionate problem-solver, full-stack developer, and AI enthusiast who thrives on building intuitive digital experiences and pushing creative boundaries.
           </p>
 
           <div className="aboutfocus">
             <div className="focusitem">
-              <h2> 30+ </h2>
-              <p> Datasets generated on kaggle </p>
+              <h2> 10000+ </h2>
+              <p> Lines contributed on GitHub</p>
             </div>
 
             <div className="focusitem">
-              <h2> 30+ </h2>
-              <p> Datasets generated on kaggle </p>
+              <h2> 10+ </h2>
+              <p> Competitions mastered on kaggle </p>
             </div>
 
             <div className="focusitem">
-              <h2> 30+ </h2>
-              <p> Datasets generated on kaggle </p>
+              <h2> 10+ </h2>
+              <p> Hackathons participated and mentored </p>
             </div>
           </div>
 
