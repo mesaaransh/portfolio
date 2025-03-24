@@ -40,9 +40,11 @@ export default function Contact() {
             });
             const result = await response.text();
             setStatus(result === "Success" ? "Message Sent!" : "Failed to send.");
+            alert(result === "Success" ? "Message Sent!" : "Failed to send.")
             console.log(status);
         } catch (error) {
             setStatus("Error sending message.");
+            alert(error)
             console.log(error);
         }
 
