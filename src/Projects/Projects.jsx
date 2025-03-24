@@ -34,7 +34,7 @@ export default function Projects() {
                     {
                         projects.map((project, i) => (
                             i % 2 == 0 ?
-                                <Project name={project.name} description={project.description} /> :
+                                <Project images={project.imgURL} name={project.name} description={project.description} /> :
                                 <></>
                         ))
                     }
@@ -43,7 +43,7 @@ export default function Projects() {
                     {
                         projects.map((project, i) => (
                             i % 2 != 0 ?
-                                <Project name={project.name} description={project.description} /> :
+                                <Project images={project.imgURL} name={project.name} description={project.description} /> :
                                 <></>
                         ))
                     }
@@ -57,12 +57,16 @@ export default function Projects() {
 }
 
 
-function Project({ name, description }) {
+function Project({ images, name, description }) {
 
     return (
         <div className="project">
             <div className="image">
-
+                {
+                    images.map((image) => (
+                        <img src={image} alt="" />
+                    ))
+                }
             </div>
             <h2 className="title">
                 {name}
