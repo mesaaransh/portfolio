@@ -18,7 +18,8 @@ function App() {
     <>
       <Router>
         <Routes>
-          <Route path="/" element={<UC />} />
+          <Route path="/" element={<Main />} />
+          <Route path="/uc" element={<UC />} />
           <Route path="/home" element={<Main />} />
         </Routes>
       </Router>
