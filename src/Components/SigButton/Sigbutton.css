@@ -11,7 +11,16 @@
     padding: 5px;
 
     gap: 15px;
+    transition-duration: 200ms;
     
+}
+
+.sigbutton:disabled{
+    background-color: grey;
+}
+.sigbutton:disabled > button:nth-of-type(1){
+    background-color: rgb(51, 51, 51);
+    padding: 0px 35px;
 }
 
 .sigbutton > button:nth-of-type(1){
@@ -30,9 +39,7 @@
 }
 
 .sigbutton:hover > button:nth-of-type(1){
-
     padding: 0px 35px;
-
 }
 
 .sigbutton > button:nth-of-type(2){
@@ -52,4 +59,18 @@
     border-radius: 200px;
     aspect-ratio: 1;
     height: 40px;
+    
 }
+
+.sigbutton:hover > button:nth-of-type(2){
+    animation: spin 0.3s ease-in-out backwards;
+}
+
+@keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(240deg);
+    }
+  }

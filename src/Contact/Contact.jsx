@@ -5,6 +5,8 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons/faGithub"
 import { faLocationPin } from "@fortawesome/free-solid-svg-icons/faLocationPin"
 import Sigbutton from "../Components/SigButton/Sigbutton"
 import { useState } from "react"
+import { useMutation } from "@tanstack/react-query"
+import axios from "axios"
 
 export default function Contact() {
 
@@ -15,7 +17,7 @@ export default function Contact() {
         message: ""
     })
 
-    const [status, setStatus] = useState("");
+    const scriptURL = process.env.VITE_LINK;
 
     function inputHandler(e) {
         setData({
@@ -24,29 +26,27 @@ export default function Contact() {
         })
     }
 
+    const sendMessage = async (data) => {
+        const response = await axios.post(scriptURL, data);
+        return response.data;
+    };
+
+    const mutation = useMutation({
+        mutationFn: sendMessage,
+        onSuccess: (data) => {
+            alert(data === "Success" ? "Message Sent!" : "Failed to send.");
+        },
+        onError: (error) => {
+            alert("Something went wrong!");
+            console.error(error);
+        },
+    });
+
     async function submitHandler(e) {
 
         e.preventDefault();
-        setStatus("Sending...");
-
-        const scriptURL = process.env.VITE_LINK;
-        let d = new FormData()
-        Object.keys(data).forEach((key) => d.append(key, data[key]));
-
-        try {
-            const response = await fetch(scriptURL, {
-                method: "POST",
-                body: d,
-            });
-            const result = await response.text();
-            setStatus(result === "Success" ? "Message Sent!" : "Failed to send.");
-            alert(result === "Success" ? "Message Sent!" : "Failed to send.")
-            console.log(status);
-        } catch (error) {
-            setStatus("Error sending message.");
-            alert(error)
-            console.log(error);
-        }
+        let d = new FormData(e.target)
+        mutation.isPending?null:mutation.mutate(d);
 
     }
 
@@ -95,8 +95,8 @@ export default function Contact() {
                         <textarea type="text" name="message" required onChange={inputHandler} />
                     </div>
 
-                    <button type="Submit" className="contactSubmit">
-                        <Sigbutton text={'Submit'} />
+                    <button type="Submit" className="contactSubmit" disabled={mutation.isPending}>
+                        <Sigbutton text={mutation.isPending?'Sending':'Submit'} disabled={mutation.isPending}/>
                     </button>
 
                 </form>
