@@ -12,7 +12,6 @@ export default function Navbar() {
     setShow(!show)
   }
 
-
   function NavMenu() {
 
     return (
@@ -24,7 +23,7 @@ export default function Navbar() {
           <a href="#hero" className='un'>Home</a>
           <a href="#skills" className='un'>Skills</a>
           <a href="#portfolio" className='un'>Projects</a>
-          <a href="#education" className='un'>Education</a>
+          <li className='un'><a href="https://blogs.saaranshgupta.com" target='_blank'>Blogs</a></li>
           <a href="#education" className='un'>Experience</a>
           <a href='#contact' className='un'>Contact</a>
         </menu>
@@ -37,20 +36,15 @@ export default function Navbar() {
   return (
     <>
       <div className='navbar'>
-        <div className="navlogo"></div>
-        <p className="navname">Saaransh</p>
 
         <menu className='navmenu'>
           <li className='un'><a href="#hero">Home</a></li>
           <li className='un'><a href="#skills">Skills</a></li>
           <li className='un'><a href="#portfolio">Projects</a></li>
-          <li className='un'><a href="#education">Education</a></li>
+          <li className='un'><a href="https://blogs.saaranshgupta.com" target='_blank'>Blogs</a></li>
           <li className='un'><a href="#education">Experience</a></li>
+          <li className='un'><a href="#contact">Contact</a></li>
         </menu>
-
-        <a className="navbutton wide" href='#contact'>
-            Contact Me
-        </a>
 
         <div className="navbutton phone" onClick={navMenuToggle}>
           <FontAwesomeIcon icon={faHamburger} />

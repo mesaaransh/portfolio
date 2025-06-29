@@ -34,18 +34,20 @@
 @media only screen and (max-width: 992px){
 
     .skillmenu{
-
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: space-around;
         gap: 20px 10px;
-
     }
 
     .skillmenu > *{
+        flex-basis: 30%;
+        text-align: center;
         cursor: pointer;
         background-color: var(--accent);
+        color: var(--black);
+        font-weight: 600;
         padding: 10px 20px;
-        border-radius: 50px;
+        border-radius: 8px;
     }
 
     .skill{

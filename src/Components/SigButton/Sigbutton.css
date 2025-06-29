@@ -5,18 +5,25 @@
     width: fit-content;
     height: fit-content;
 
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
     background-color: var(--accent);
+    color: var(--black);
+    font-weight: 500;
     border: 0px solid black;
-    border-radius: 200px;
-    padding: 5px;
+    border-radius: 8px;
+    padding: 15px 20px;
 
-    gap: 15px;
     transition-duration: 200ms;
     
 }
 
+.sigbutton:hover{
+    padding: 15px 30px;
+}
+
 .sigbutton:disabled{
-    background-color: grey;
+    background-color: var(--grey);
 }
 .sigbutton:disabled > button:nth-of-type(1){
     background-color: rgb(51, 51, 51);
@@ -61,16 +68,3 @@
     height: 40px;
     
 }
-
-.sigbutton:hover > button:nth-of-type(2){
-    animation: spin 0.3s ease-in-out backwards;
-}
-
-@keyframes spin {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(240deg);
-    }
-  }

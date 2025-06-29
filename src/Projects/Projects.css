@@ -1,9 +1,3 @@
-.portfolio{
-
-    background-color: var(--whited);
-
-}
-
 .projecthead{
     display: flex;
     align-items: center;
@@ -33,15 +27,12 @@
 
     display: flex;
     flex-direction: column;
-    background-color: var(--white);
-    border: 1px solid var(--whitedd);
-    padding: 15px;
+    background-color: var(--dgrey);
+    padding: 20px;
     border-radius: 13px;
 
     transition-duration: 300ms;
     cursor: pointer;
-
-    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.3);
 
 }
 
@@ -75,34 +66,50 @@
     align-items: center;
     justify-content: space-between;
     
-    padding: 10px 0px;
+    padding: 20px 0px;
     padding-top: 20px;
 
 }
 
 .project > p{
+    color: var(--grey);
+}
 
-    color: var(--gray);
+.project .tags{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 30px;
+}
 
+.tag{
+    background-color: var(--ldgrey);
+    color: var(--white);
+    font-weight: 600;
+    font-size: 0.8rem;
+    border-radius: 6px;
+    padding: 12px 20px;
+
+            flex-grow: 1;
+        text-align: center;
 }
 
 .title > .flex{
-
     gap: 10px;
-
 }
 
 .title > .flex > *{
+    font-size: 1.5rem;
     cursor: pointer;
     transition-duration: 100ms;
 }
 
 .title > .flex > *:hover:nth-of-type(1){
-    color: var(--orange);
+    color: var(--accentd);
 }
 
 .title > .flex > *:hover:nth-of-type(2){
-    color: var(--blue)
+    color: var(--accentd)
 }
 
 .projects > button{
@@ -111,7 +118,7 @@
 
 @media only screen and (max-width: 992px){
 
-    .projecthead > button{
+    .projecthead button{
         display: none;
     }
 
@@ -120,14 +127,18 @@
     }
 
     .projects > button{
+        justify-content: center;
         display: flex;
-        margin-left: auto;
+        flex-grow: 1;
     }
 
     .projects > .col{
-
         flex: 100%;
+    }
 
+    .tag{
+        flex-grow: 1;
+        text-align: center;
     }
 
 }

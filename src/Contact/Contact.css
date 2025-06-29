@@ -80,7 +80,7 @@
 
     outline: 0px solid;
     border: 0px solid;
-    background-color: var(--whitedd);
+    background-color: var(--dgrey);
 
     margin-top: 5px;
     border-radius: 5px;
@@ -94,9 +94,13 @@
 }
 
 .contactSubmit{
-    border: 0px solid;
     background-color: transparent;
-    width: fit-content;
+    border: 0px solid;
+}
+
+.contactSubmit button{
+    width: 100%;
+    justify-content: center;
 }
 
 @media only screen and (max-width: 992px){

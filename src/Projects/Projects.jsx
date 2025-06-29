@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { faPlay } from '@fortawesome/free-solid-svg-icons'
 import projectlist from './projectlist'
+import AnimatedContent from '../ReactBits/AnimatedContent'
 
 export default function Projects() {
 
@@ -34,7 +35,7 @@ export default function Projects() {
                     {
                         projects.map((project, i) => (
                             i % 2 == 0 ?
-                                <Project images={project.imgURL} name={project.name} description={project.description} /> :
+                                <Project key={i} images={project.imgURL} name={project.name} description={project.description} /> :
                                 <></>
                         ))
                     }
@@ -43,7 +44,7 @@ export default function Projects() {
                     {
                         projects.map((project, i) => (
                             i % 2 != 0 ?
-                                <Project images={project.imgURL} name={project.name} description={project.description} /> :
+                                <Project key={i} images={project.imgURL} name={project.name} description={project.description} /> :
                                 <></>
                         ))
                     }
@@ -57,9 +58,10 @@ export default function Projects() {
 }
 
 
-function Project({ images, name, description }) {
+function Project({ key, images, name, description }) {
 
     return (
+        <AnimatedContent>
         <div className="project">
             <div className="image">
                 {
@@ -79,8 +81,15 @@ function Project({ images, name, description }) {
             <p>
                 {description}
             </p>
-        </div>
 
+            <div className="tags">
+                <div className="tag">Web Development</div>
+                <div className="tag">React</div>
+                <div className="tag">HTML</div>
+                <div className="tag">Something</div>
+            </div>
+        </div>
+        </AnimatedContent>
     )
 
 }

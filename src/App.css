@@ -2,12 +2,7 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
-  color: rgb(19, 19, 19);
-  font-weight: 500;
-
   text-decoration: none;
-
   color: inherit;
 }
 
@@ -15,18 +10,24 @@
 
   --primary: #344c36;
   --primaryd: #253627;
-  --accent: #fca90f;
-  --accentd: #e69a0f;
+  --accent: #fffb00;
+  --accentd: #ffe600;
 
   --orange: #f73a00;
   --blue: #0083da;
 
-  --white: #f7f7f7;
   --whited: #ebebeb;
   --whitedd: #e0e0e0;
   --whiteddd:rgb(197, 197, 197);
 
-  --gray: #808080;
+  --black: #080808;
+  --black2: #0d0d18;
+  --white: #f5f5f5;
+  --grey: #c7c7c7;
+  --dgrey: #0f0f0f;
+  --ldgrey: #1a1a1a;
+  --lldgrey: #5a5a5a;
+  --primary: #4c1aff;
 
 }
 
@@ -44,13 +45,14 @@ p{
   width: 100vw;
   padding: 0px 7vw;
   padding-right: 8vw;
-  padding-top: 90px;
+  padding-top: 50px;
 }
 
 .button{
 
-  padding: 10px 20px;
-  border-radius: 200px;
+  font-family: 'Montserrat', sans-serif;
+  padding: 10px 30px;
+  border-radius: 8px;
 
   display: flex;
   align-items: center;
@@ -63,7 +65,11 @@ html{
 }
 
 body{
-  background-color: var(--white);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+
+  background-color: var(--black);
+  color: var(--white);
   overflow-x: hidden;
   width: 100vw;
 }

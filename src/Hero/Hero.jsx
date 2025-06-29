@@ -1,39 +1,69 @@
-import React from 'react'
 import "./Hero.css"
-import bot from "./assets/bot.png"
-import Sigbutton from '../Components/SigButton/Sigbutton'
-import { useNavigate } from 'react-router-dom'
+import SplitText from "../ReactBits/SplitText"
+import DotGrid from "../ReactBits/DotGrid"
 
 export default function Hero() {
 
-    var navigator = useNavigate();
-    function resumeRedirect() {
-        navigator('/resume.pdf')
-    }
-
     return (
         <div className='wrapper hero' id='hero'>
-            <div className="herointro">
-                <h4 className='square'>
-                    <div className="insquare"></div>
-                    Hello There!
-                </h4>
-                <h1>
-                    I'm <em>Saaransh Gupta, </em> <br />
-                    Web Developer <br />
-                    Based in Punjab.
-                </h1>
 
-                <p>Building scalable solutions, crafting immersive experiences, and innovating with AI-driven full-stack development.</p>
-
-                <a className="contactSubmit" href='/resume.pdf' target='_blank'>
-                    <Sigbutton text={'View My Resume'} />
-                </a>
-
+            <div className="herobg">
+                <DotGrid
+                    dotSize={2}
+                    gap={8}
+                    baseColor={"#1a1a1a"}
+                    activeColor="#4c1aff"
+                    proximity={120}
+                    shockRadius={250}
+                    shockStrength={5}
+                    resistance={750}
+                    returnDuration={1.5}
+                />
             </div>
 
-            <div className="herophoto">
-                <img className='' src={bot} alt="" />
+            <div className="herointro">
+                <h1>
+                    <SplitText
+                        text="Saaransh Gupta"
+                        className=""
+                        delay={100}
+                        duration={2}
+                        ease="power3.out"
+                        splitType="words"
+                        from={{ opacity: 0, y: 40 }}
+                        to={{ opacity: 1, y: 0 }}
+                        threshold={0.1}
+                        rootMargin="-100px"
+                        textAlign="center"
+                    />
+                </h1>
+
+                <p>
+                    <SplitText
+                        text="Building scalable solutions, crafting immersive experiences, and innovating with AI-driven full-stack development"
+                        className=""
+                        delay={100}
+                        duration={2}
+                        ease="power3.out"
+                        splitType="words"
+                        from={{ opacity: 0, y: 40 }}
+                        to={{ opacity: 1, y: 0 }}
+                        threshold={0.1}
+                        rootMargin="-100px"
+                        textAlign="center"
+                    />
+                </p>
+
+                <div className="btnGroup">
+                    <button className="button">
+                        Resume
+                    </button>
+                    <button className="button">
+                        About Me
+                    </button>
+                </div>
+
+
             </div>
         </div>
     )

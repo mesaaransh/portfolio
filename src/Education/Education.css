@@ -1,87 +1,89 @@
-.eduhead{
+.eduhead {
     width: 100%;
 
     display: flex;
     text-align: center;
     flex-direction: column;
     justify-content: center;
-    
 }
 
-.eduhead > .subhead{
+.eduhead>.subhead {
     margin-left: auto;
     margin-right: auto;
 }
 
-.educont{
-
+.educont {
+    width: 100%;
     display: flex;
+    justify-content: center;
     gap: 60px;
 
     margin-top: 50px;
     margin-bottom: 50px;
-    
 }
 
-.edu, .work{
-    width: 100%;
-    background-color: var(--whited);
+.edu,
+.work {
+    width: 80%;
+    background-color: var(--dgrey);
 
-    border-radius: 20px;
+    border-radius: 10px;
     padding: 20px;
 
     display: flex;
     flex-direction: column;
-
+    gap: 20px;
     text-align: left;
-    border: 1px solid var(--whitedd);
 }
 
-.edu > .flex, .work > .flex{
-
-    align-items: center;
-    gap: 10px;
-
-}
-
-.icon{
-
-    aspect-ratio: 1;
-    font-size: 1.2em;
-    background-color: var(--accent);
-    border-radius: 100px;
+.eduitem {
     padding: 15px;
-
-}
-
-.eduitem{
-
-    margin-top: 30px;
-    padding: 5px;
     padding-left: 15px;
 
-
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
     gap: 5px;
 
-    border-left: 4px solid var(--whiteddd);
-
+    border-left: 4px solid var(--ldgrey);
+    transition-duration: 200ms;
 }
 
-.eduitem > h4{
-
-    color: var(--gray);
-
+.eduitem:hover{
+    background-color: var(--ldgrey);
+    border-left: 4px solid var(--accent);
 }
 
-@media only screen and (max-width: 992px){
+.eduitem div:nth-of-type(2) {
+    text-align: right;
+}
 
-    .educont{
+.eduitem h4{
+    color: var(--lldgrey);
+    font-weight: 600;
+}
 
+@media only screen and (max-width: 992px) {
+    .educont {
         display: flex;
-        flex-direction: column-reverse;
-
+        flex-direction: column;
+        align-items: center;
     }
 
+    .work {
+        width: 100%;
+    }
+
+    .eduitem{
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+        gap: 0px;
+    }
+
+    .eduitem div:nth-of-type(2) {
+        text-align: left;
+        display: flex;
+        flex-direction: column-reverse;
+    }
 }

@@ -34,8 +34,8 @@ function Main() {
       <Navbar />
       <Hero />
       <Banner />
-      <Skills />
       <About />
+      <Skills />
       <Projects />
       <Education />
       <Banner />

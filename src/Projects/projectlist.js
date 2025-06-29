@@ -3,6 +3,7 @@ var projectlist = [
     {
         name: "BoxBox",
         description: "An F1 race strategy optimizer leveraging telemetry data, tyre degradation modeling, and pit stop simulations to predict the fastest race plan.",
+        tags: [],
         'imgURL': [
             '/assets/boxbox/1.jpg',
         ]

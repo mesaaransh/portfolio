@@ -25,6 +25,7 @@ import github from "./assets/github.png"
 import jenkins from "./assets/jenkins.png"
 import docker from "./assets/docker.png"
 import kubernetes from "./assets/kubernetes.png"
+import AnimatedContent from '../ReactBits/AnimatedContent'
 
 export default function Skills() {
 
@@ -54,6 +55,9 @@ export default function Skills() {
         return(
 
             skills.map((skill) => (
+                <AnimatedContent
+                    threshold={0}
+                >
                 <div>
                     {
                         map[selectedSkill].includes(skill)?
@@ -61,6 +65,7 @@ export default function Skills() {
                         <img src={skill} alt={skill} className="skill fade" />
                     }
                 </div>
+                </AnimatedContent>
             ))
 
         )
@@ -69,13 +74,7 @@ export default function Skills() {
 
     return (
         <div className='wrapper' id='skills'>
-
-            <h3 className='subhead'>
-                Skills
-            </h3>
-
-            <h1 className='head'><em>Skills</em> I Know</h1>
-
+        <AnimatedContent threshold={0}>
             <menu className="skillmenu" onMouseOut={() => setSelectedSkill(1)}>
                 {/* <li className='un' onMouseOver={() => setSelectedSkill(1)}>All</li> */}
                 <li className='un' onMouseOver={() => setSelectedSkill(2)}>Languages</li>
@@ -85,14 +84,13 @@ export default function Skills() {
                 <li className='un' onMouseOver={() => setSelectedSkill(6)}>AI/ML</li>
                 <li className='un' onMouseOver={() => setSelectedSkill(7)}>Databases</li>
             </menu>
+        </AnimatedContent>
 
             <div className="skillset">
             {
                 skillshow()
             }
             </div>
-
-
 
         </div>
     )
