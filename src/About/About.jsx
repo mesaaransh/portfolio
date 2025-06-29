@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faInstagram, faKaggle, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
 
 import AnimatedContent from "../ReactBits/AnimatedContent"
+import { useNavigate } from 'react-router-dom'
 
 export default function About() {
   return (
@@ -32,6 +33,8 @@ export default function About() {
 
 
 function AboutCard() {
+
+  const navigator = useNavigate();
   return (
     <div className="aboutCard">
 
@@ -75,7 +78,7 @@ function AboutCard() {
             <h2>
               <CountUp
                 from={0}
-                to={10}
+                to={20}
                 delay={0.1}
                 separator=","
                 direction="up"
@@ -90,7 +93,7 @@ function AboutCard() {
             <h2>
               <CountUp
                 from={0}
-                to={10}
+                to={2000}
                 delay={0.5}
                 separator=","
                 direction="up"
@@ -98,15 +101,15 @@ function AboutCard() {
               />
               +
             </h2>
-            <p> Hackathons </p>
+            <p> Users Impacted </p>
           </div>
         </div>
 
         <div className="btnGroup">
-          <Sigbutton text={'View My Resume'} />
-          <FontAwesomeIcon icon={faGithub} />
-          <FontAwesomeIcon icon={faLinkedinIn} />
-          <FontAwesomeIcon icon={faInstagram} />
+          <div><a href="./resume.pdf"><Sigbutton text={'View My Resume'} /></a></div>
+          <div><a href="https://www.github.com/mesaaransh" target='_blank'><FontAwesomeIcon icon={faGithub}/></a></div>
+          <div><a href="https://www.linkedin.com/in/saaranshgupta19/" target='_blank'><FontAwesomeIcon icon={faLinkedinIn} /></a></div>
+          <div><a href="https://www.instagram.com/mesaaransh/" target='_blank'><FontAwesomeIcon icon={faInstagram} /></a></div>
         </div>
 
       </div>
