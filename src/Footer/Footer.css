@@ -2,10 +2,9 @@
 
     display: flex;
     justify-content: space-between;
-    background-color: var(--primary);
-    color: var(--white);
+    background-color: var(--dgrey);
+    color: var(--grey);
 
-    padding: 20px;
-    padding-right: 40px;
+    padding: 40px 5vw;
 
 }

@@ -106,7 +106,8 @@ function AboutCard() {
         </div>
 
         <div className="btnGroup">
-          <div><a href="./resume.pdf"><Sigbutton text={'View My Resume'} /></a></div>
+          <div className='lbutton'><a href="./resume.pdf"><Sigbutton text={'View My Resume'} /></a></div>
+          <div className='mbutton'><a href="./resume.pdf"><Sigbutton text={'Resume'} /></a></div>
           <div><a href="https://www.github.com/mesaaransh" target='_blank'><FontAwesomeIcon icon={faGithub}/></a></div>
           <div><a href="https://www.linkedin.com/in/saaranshgupta19/" target='_blank'><FontAwesomeIcon icon={faLinkedinIn} /></a></div>
           <div><a href="https://www.instagram.com/mesaaransh/" target='_blank'><FontAwesomeIcon icon={faInstagram} /></a></div>

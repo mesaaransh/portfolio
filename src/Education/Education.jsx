@@ -1,7 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import "./Education.css"
-import { faSchool, faSchoolFlag } from "@fortawesome/free-solid-svg-icons"
-import { faBriefcase } from "@fortawesome/free-solid-svg-icons/faBriefcase"
+import AnimatedContent from "../ReactBits/AnimatedContent"
 
 export default function Education() {
     return (
@@ -10,10 +9,15 @@ export default function Education() {
                 <h3 className="subhead">My Experience</h3>
                 <h1 className='head'>My <em> Professional</em> Journey</h1>
 
+                <AnimatedContent>
+
                 <div className="educont">
 
                     <div className="work">
 
+                        <AnimatedContent
+                        direction="horizontal"
+                        reverse={true}>
                         <div className="eduitem">
                             <div>
                                 <h2>Full Stack Intern</h2>
@@ -24,7 +28,11 @@ export default function Education() {
                                 <h4>Patiala, India</h4>
                             </div>
                         </div>
+                        </AnimatedContent>
 
+                        <AnimatedContent
+                        direction="horizontal"
+                        reverse={true}>
                         <div className="eduitem">
                             <div>
                                 <h2>Full Stack Intern</h2>
@@ -35,7 +43,11 @@ export default function Education() {
                                 <h4>Remote | Delhi, India</h4>
                             </div>
                         </div>
-
+                        </AnimatedContent>
+                        
+                        <AnimatedContent
+                        direction="horizontal"
+                        reverse={true}>
                         <div className="eduitem">
                             <div>
                                 <h2>Research Intern</h2>
@@ -46,9 +58,12 @@ export default function Education() {
                                 <h4>Chandigarh, India</h4>
                             </div>
                         </div>
+                        </AnimatedContent>
                     </div>
 
                 </div>
+
+                </AnimatedContent>
             </div>
         </div>
     )

@@ -1,8 +1,4 @@
-import React from 'react'
 import "./Banner.css"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faStarOfLife } from '@fortawesome/free-solid-svg-icons'
-
 import ScrollVelocity from "../ReactBits/ScrollVelocity"
 
 export default function Banner() {
@@ -10,9 +6,9 @@ export default function Banner() {
     <>
       <div>
         <ScrollVelocity
-          texts={['Web Developer', 'Designer', 'Guitarist']}
-          velocity={40}
-          className="custom-scroll-text"
+          texts={['Web Developer', 'Designer Guitarist', 'Data Scientist']}
+          velocity={60}
+          className=""
         />
       </div>
     </>
