@@ -36,7 +36,7 @@ function AboutCard() {
 
   const navigator = useNavigate();
   return (
-    <div className="aboutCard">
+    <div className="aboutCard" id='about'>
 
       <div className='aboutContent'>
         <h1 className='head'>Who is <em>Saaransh Gupta?</em></h1>

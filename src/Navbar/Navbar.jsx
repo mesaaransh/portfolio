@@ -39,6 +39,7 @@ export default function Navbar() {
 
         <menu className='navmenu'>
           <li className='un'><a href="#hero">Home</a></li>
+          <li className='un'><a href="#about">About</a></li>
           <li className='un'><a href="#skills">Skills</a></li>
           <li className='un'><a href="#portfolio">Projects</a></li>
           <li className='un'><a href="https://blogs.saaranshgupta.com" target='_blank'>Blogs</a></li>

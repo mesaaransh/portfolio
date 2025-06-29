@@ -55,12 +55,16 @@ export default function Hero() {
                 </p>
 
                 <div className="btnGroup">
+                    <a href="./resume.pdf" target="_blank">
                     <button className="button">
                         Resume
                     </button>
+                    </a>
+                    <a href="#about">
                     <button className="button">
                         About Me
                     </button>
+                    </a>
                 </div>
 
 
