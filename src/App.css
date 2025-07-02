@@ -8,17 +8,9 @@
 
 :root{
 
-  --primary: #344c36;
-  --primaryd: #253627;
   --accent: #fffb00;
   --accentd: #ffe600;
 
-  --orange: #f73a00;
-  --blue: #0083da;
-
-  --whited: #ebebeb;
-  --whitedd: #e0e0e0;
-  --whiteddd:rgb(197, 197, 197);
 
   --black: #080808;
   --black2: #0d0d18;
@@ -31,8 +23,20 @@
 
 }
 
+
+html{
+    scroll-behavior: smooth;
+    font-size: 16pt;
+}
+
+@media only screen and (max-width: 1400px){
+  html{
+    font-size: 12pt;
+  }
+}
+
 @media only screen and (max-width: 992px){
-  body{
+  html{
     font-size: 10pt;
   }
 }
@@ -58,10 +62,6 @@ p{
   align-items: center;
   justify-content: center;
 
-}
-
-html{
-    scroll-behavior: smooth;
 }
 
 body{
@@ -181,7 +181,7 @@ button{
 
 .head{
 
-  font-size: 2.7em;
+  font-size: 2.7rem;
   font-weight: 600;
   margin: 10px 0px;
 

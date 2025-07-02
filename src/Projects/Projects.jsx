@@ -35,7 +35,7 @@ export default function Projects() {
                     {
                         projects.map((project, i) => (
                             i % 2 == 0 ?
-                                <Project key={i} images={project.imgURL} name={project.name} description={project.description} /> :
+                                <Project key={i} images={project.imgURL} name={project.name} description={project.description} tags={project.tags} /> :
                                 <></>
                         ))
                     }
@@ -44,7 +44,7 @@ export default function Projects() {
                     {
                         projects.map((project, i) => (
                             i % 2 != 0 ?
-                                <Project key={i} images={project.imgURL} name={project.name} description={project.description} /> :
+                                <Project key={i} images={project.imgURL} name={project.name} description={project.description} tags={project.tags} /> :
                                 <></>
                         ))
                     }
@@ -58,7 +58,7 @@ export default function Projects() {
 }
 
 
-function Project({ key, images, name, description }) {
+function Project({ key, tags, images, name, description }) {
 
     return (
         <AnimatedContent>
@@ -66,7 +66,7 @@ function Project({ key, images, name, description }) {
             <div className="image">
                 {
                     images.map((image) => (
-                        <img src={image} alt="" />
+                        <img src={image} style={{flexBasis: images.length>2?'45%':'100%'}} alt="" />
                     ))
                 }
             </div>
@@ -83,10 +83,11 @@ function Project({ key, images, name, description }) {
             </p>
 
             <div className="tags">
-                <div className="tag">Web Development</div>
-                <div className="tag">React</div>
-                <div className="tag">HTML</div>
-                <div className="tag">Something</div>
+                {
+                    tags.map((tag, i) => (
+                        <div className="tag" key={i}>{tag}</div>
+                    ))
+                }
             </div>
         </div>
         </AnimatedContent>

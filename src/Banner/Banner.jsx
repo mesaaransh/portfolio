@@ -7,7 +7,7 @@ export default function Banner() {
       <div>
         <ScrollVelocity
           texts={['Web Developer', 'Designer Guitarist', 'Data Scientist']}
-          velocity={60}
+          velocity={30}
           className=""
         />
       </div>
