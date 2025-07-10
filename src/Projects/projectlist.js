@@ -6,7 +6,9 @@ var projectlist = [
         tags: ['Artificial Intelligence', 'Data Science', 'Python', 'FastAPI'],
         'imgURL': [
             '/assets/boxbox/1.jpg',
-        ]
+        ],
+        'links':{
+        }
 
     },
     {
@@ -16,7 +18,10 @@ var projectlist = [
         'imgURL': [
             '/assets/splitzee/1.jpg',
             '/assets/splitzee/2.jpg',
-        ]
+        ],
+        'links':{
+            'github': 'https://github.com/mesaaransh/Splitzee',
+        }
 
 
     },
@@ -35,7 +40,11 @@ var projectlist = [
             '/assets/spermi/2.jpg',
             '/assets/spermi/3.jpg',
             '/assets/spermi/4.jpg',
-        ]
+        ],
+        'links':{
+            'github': 'https://github.com/creative-computing-society/society-permissions',
+            'live': 'https://society-permissions.thapar.edu/',
+        }
     },
     {
         name: "Raptus",
@@ -43,7 +52,9 @@ var projectlist = [
         tags: ['Game Development', 'React', 'ThreeJS'],
         'imgURL': [
             '/assets/raptus/1.jpg',
-        ]
+        ],
+        'links':{
+        }
         
     },
     {
@@ -53,7 +64,10 @@ var projectlist = [
         'imgURL': [
             '/assets/easyfind/1.jpg',
             '/assets/easyfind/2.jpg',
-        ]
+        ],
+        'links':{
+            'github': 'https://github.com/mesaaransh/SmartLostFound',
+        }
 
     },
     {
@@ -67,7 +81,11 @@ var projectlist = [
         ],
         'imgURL': [
             '/assets/pulse/1.jpg',
-        ]
+        ],
+        'links':{
+            'github': 'https://github.com/mesaaransh/EventsPortal',
+            'live': 'https://eventsportal.netlify.app/',
+        }
     },
 
 ]

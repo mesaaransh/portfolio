@@ -1,6 +1,6 @@
 import React from 'react'
 import "./About.css"
-import me from "./assets/me2.png"
+import me from "./assets/me.jpg"
 import Sigbutton from '../Components/SigButton/Sigbutton'
 import CountUp from "../ReactBits/CountUp"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'

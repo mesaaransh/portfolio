@@ -1,4 +1,3 @@
-import React from 'react'
 import "./Projects.css"
 import Sigbutton from '../Components/SigButton/Sigbutton'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -35,7 +34,7 @@ export default function Projects() {
                     {
                         projects.map((project, i) => (
                             i % 2 == 0 ?
-                                <Project key={i} images={project.imgURL} name={project.name} description={project.description} tags={project.tags} /> :
+                                <Project key={i} images={project.imgURL} name={project.name} description={project.description} tags={project.tags} links={project.links} /> :
                                 <></>
                         ))
                     }
@@ -44,7 +43,7 @@ export default function Projects() {
                     {
                         projects.map((project, i) => (
                             i % 2 != 0 ?
-                                <Project key={i} images={project.imgURL} name={project.name} description={project.description} tags={project.tags} /> :
+                                <Project key={i} images={project.imgURL} name={project.name} description={project.description} tags={project.tags} links={project.links} /> :
                                 <></>
                         ))
                     }
@@ -58,7 +57,7 @@ export default function Projects() {
 }
 
 
-function Project({ key, tags, images, name, description }) {
+function Project({ key, tags, images, links, name, description }) {
 
     return (
         <AnimatedContent>
@@ -73,8 +72,18 @@ function Project({ key, tags, images, name, description }) {
             <h2 className="title">
                 {name}
                 <div className='flex'>
-                    <FontAwesomeIcon icon={faGithub} />
-                    <FontAwesomeIcon icon={faPlay} />
+                    {
+                        links.github &&
+                        <a href={links.github} target='_blank' rel="noreferrer">
+                            <FontAwesomeIcon icon={faGithub} />
+                        </a>
+                    }
+                    {
+                        links.live &&
+                        <a href={links.live} target='_blank' rel="noreferrer">
+                            <FontAwesomeIcon icon={faPlay} />
+                        </a>
+                    }
                 </div>
             </h2>
 

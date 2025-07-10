@@ -18,10 +18,9 @@
 
 .aboutphoto > .photo {
   aspect-ratio: 1;
-  padding-top: 10px;
   background-color: var(--primary);
   border-radius: 10px;
-
+  
   display: flex;
   align-items: center;
   justify-content: center;
@@ -30,9 +29,10 @@
 .photo > img {
   width: 100%;
   height: 100%;
+  border-radius: 10px;
 
   object-position: top;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 .aboutContent {
@@ -106,15 +106,12 @@ display: block;
   .aboutCard {
     display: flex;
     flex-direction: column-reverse;
+    gap: 30px;
   }
 
   .aboutcontent {
     margin-top: 50px;
     width: 100%;
-  }
-
-  .aboutphoto {
-    display: none;
   }
 
   .btnGroup > * {
