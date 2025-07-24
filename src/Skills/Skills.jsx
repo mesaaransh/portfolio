@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Tooltip } from 'react-tooltip'
 import "./Skills.css"
 import c from "./assets/c.png"
 import cpp from "./assets/cpp.png"
@@ -27,6 +28,15 @@ import docker from "./assets/docker.png"
 import kubernetes from "./assets/kubernetes.png"
 import AnimatedContent from '../ReactBits/AnimatedContent'
 
+
+function toSentenceCase(str) {
+  if (typeof str !== 'string' || str.length === 0) {
+    return "";
+  }
+  const lowercasedStr = str.toLowerCase();
+  return lowercasedStr.charAt(0).toUpperCase() + lowercasedStr.slice(1);
+}
+
 export default function Skills() {
 
     const languages = [c, cpp, javascript, python, html, css]
@@ -54,11 +64,16 @@ export default function Skills() {
 
         return(
 
-            skills.map((skill) => (
+            skills.map((skill, i) => {
+
+                let text = skill.split('/')[4].split('.')[0]
+                
+                return (
                 <AnimatedContent
                     threshold={0}
                 >
-                <div>
+                <Tooltip id={"t" + i} />
+                <div data-tooltip-id={"t" + i} data-tooltip-content={toSentenceCase(text)}>
                     {
                         map[selectedSkill].includes(skill)?
                         <img src={skill} alt={skill} className="skill" />:
@@ -66,7 +81,7 @@ export default function Skills() {
                     }
                 </div>
                 </AnimatedContent>
-            ))
+            )})
 
         )
 
