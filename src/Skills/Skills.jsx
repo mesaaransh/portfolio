@@ -30,11 +30,11 @@ import AnimatedContent from '../ReactBits/AnimatedContent'
 
 
 function toSentenceCase(str) {
-  if (typeof str !== 'string' || str.length === 0) {
-    return "";
-  }
-  const lowercasedStr = str.toLowerCase();
-  return lowercasedStr.charAt(0).toUpperCase() + lowercasedStr.slice(1);
+    if (typeof str !== 'string' || str.length === 0) {
+        return "";
+    }
+    const lowercasedStr = str.toLowerCase();
+    return lowercasedStr.charAt(0).toUpperCase() + lowercasedStr.slice(1);
 }
 
 export default function Skills() {
@@ -47,10 +47,40 @@ export default function Skills() {
     const database = [oracle, mongodb, mysql]
     const allskills = [...languages, ...Frontend, ...Backend, ...devops, ...Ai, ...database];
     const skills = [...new Set(allskills)]
-    
+
     let [selectedSkill, setSelectedSkill] = useState(1);
 
-    function skillshow(){
+    const skillStrings = {
+        [c]: "C",
+        [cpp]: "C++",
+        [javascript]: "JavaScript",
+        [python]: "Python",
+        [html]: "HTML",
+        [css]: "CSS",
+        [nextjs]: "Next.js",
+        [react]: "React",
+        [django]: "Django",
+        [nodejs]: "Node.js",
+        [express]: "Express",
+        [graphql]: "GraphQL",
+        [git]: "Git",
+        [github]: "GitHub",
+        [jenkins]: "Jenkins",
+        [docker]: "Docker",
+        [kubernetes]: "Kubernetes",
+        [numpy]: "NumPy",
+        [opencv]: "OpenCV",
+        [tensorflow]: "TensorFlow",
+        [keras]: "Keras",
+        [oracle]: "Oracle",
+        [mongodb]: "MongoDB",
+        [mysql]: "MySQL"
+    };
+
+
+
+
+    function skillshow() {
 
         const map = {
             1: skills,
@@ -62,26 +92,27 @@ export default function Skills() {
             7: database
         }
 
-        return(
+        return (
 
             skills.map((skill, i) => {
 
-                let text = skill.split('/')[4].split('.')[0]
-                
+                let text = skillStrings[skill]
+
                 return (
-                <AnimatedContent
-                    threshold={0}
-                >
-                <Tooltip id={"t" + i} />
-                <div data-tooltip-id={"t" + i} data-tooltip-content={toSentenceCase(text)}>
-                    {
-                        map[selectedSkill].includes(skill)?
-                        <img src={skill} alt={skill} className="skill" />:
-                        <img src={skill} alt={skill} className="skill fade" />
-                    }
-                </div>
-                </AnimatedContent>
-            )})
+                    <AnimatedContent
+                        threshold={0}
+                    >
+                        <Tooltip id={"t" + i} />
+                        <div data-tooltip-id={"t" + i} data-tooltip-content={text}>
+                            {
+                                map[selectedSkill].includes(skill) ?
+                                    <img src={skill} alt={skill} className="skill" /> :
+                                    <img src={skill} alt={skill} className="skill fade" />
+                            }
+                        </div>
+                    </AnimatedContent>
+                )
+            })
 
         )
 
@@ -89,22 +120,22 @@ export default function Skills() {
 
     return (
         <div className='wrapper' id='skills'>
-        <AnimatedContent threshold={0}>
-            <menu className="skillmenu" onMouseOut={() => setSelectedSkill(1)}>
-                {/* <li className='un' onMouseOver={() => setSelectedSkill(1)}>All</li> */}
-                <li className='un' onMouseOver={() => setSelectedSkill(2)}>Languages</li>
-                <li className='un' onMouseOver={() => setSelectedSkill(3)}>Frontend</li>
-                <li className='un' onMouseOver={() => setSelectedSkill(4)}>Backend</li>
-                <li className='un' onMouseOver={() => setSelectedSkill(5)}>Devops</li>
-                <li className='un' onMouseOver={() => setSelectedSkill(6)}>AI/ML</li>
-                <li className='un' onMouseOver={() => setSelectedSkill(7)}>Databases</li>
-            </menu>
-        </AnimatedContent>
+            <AnimatedContent threshold={0}>
+                <menu className="skillmenu" onMouseOut={() => setSelectedSkill(1)}>
+                    {/* <li className='un' onMouseOver={() => setSelectedSkill(1)}>All</li> */}
+                    <li className='un' onMouseOver={() => setSelectedSkill(2)}>Languages</li>
+                    <li className='un' onMouseOver={() => setSelectedSkill(3)}>Frontend</li>
+                    <li className='un' onMouseOver={() => setSelectedSkill(4)}>Backend</li>
+                    <li className='un' onMouseOver={() => setSelectedSkill(5)}>Devops</li>
+                    <li className='un' onMouseOver={() => setSelectedSkill(6)}>AI/ML</li>
+                    <li className='un' onMouseOver={() => setSelectedSkill(7)}>Databases</li>
+                </menu>
+            </AnimatedContent>
 
             <div className="skillset">
-            {
-                skillshow()
-            }
+                {
+                    skillshow()
+                }
             </div>
 
         </div>
