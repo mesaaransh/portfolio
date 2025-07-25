@@ -1,12 +1,12 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import "./Contact.css"
-import { faMailBulk, faPhone } from "@fortawesome/free-solid-svg-icons"
-import { faGithub } from "@fortawesome/free-brands-svg-icons/faGithub"
-import { faLocationPin } from "@fortawesome/free-solid-svg-icons/faLocationPin"
-import Sigbutton from "../Components/SigButton/Sigbutton"
+import axios from "axios"
 import { useState } from "react"
 import { useMutation } from "@tanstack/react-query"
-import axios from "axios"
+import Sigbutton from "../Components/SigButton/Sigbutton"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faGithub } from "@fortawesome/free-brands-svg-icons/faGithub"
+import { faMailBulk, faPhone } from "@fortawesome/free-solid-svg-icons"
+import { faLocationPin } from "@fortawesome/free-solid-svg-icons/faLocationPin"
 
 export default function Contact() {
 
@@ -27,7 +27,11 @@ export default function Contact() {
     }
 
     const sendMessage = async (data) => {
-        const response = await axios.post(scriptURL, data);
+        const response = await axios.post(scriptURL, JSON.stringify(data), {
+            headers: {
+                "Content-Type": "application/json",
+            },
+        });
         return response.data;
     };
 
@@ -46,7 +50,7 @@ export default function Contact() {
 
         e.preventDefault();
         let d = new FormData(e.target)
-        mutation.isPending?null:mutation.mutate(d);
+        mutation.isPending ? null : mutation.mutate(d);
 
     }
 
@@ -58,7 +62,7 @@ export default function Contact() {
                 <h1 className='head'>Let's Talk for <em> Your <br /> Next Projects </em> </h1>
 
                 <p>
-                Got an exciting project, a wild idea, or just want to brainstorm over coffee? Let's connect and create something incredible together!
+                    Got an exciting project, a wild idea, or just want to brainstorm over coffee? Let's connect and create something incredible together!
                 </p>
 
                 <div className="contacticons">
@@ -96,7 +100,7 @@ export default function Contact() {
                     </div>
 
                     <button type="Submit" className="contactSubmit" disabled={mutation.isPending}>
-                        <Sigbutton text={mutation.isPending?'Sending':'Submit'} disabled={mutation.isPending}/>
+                        <Sigbutton text={mutation.isPending ? 'Sending' : 'Submit'} disabled={mutation.isPending} />
                     </button>
 
                 </form>

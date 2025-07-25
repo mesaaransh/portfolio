@@ -21,6 +21,7 @@ var projectlist = [
         ],
         'links':{
             'github': 'https://github.com/mesaaransh/Splitzee',
+            'live': 'https://splitzee.saaranshgupta.com',
         }
 
 
