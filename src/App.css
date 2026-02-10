@@ -26,7 +26,7 @@
 
 html{
     scroll-behavior: smooth;
-    font-size: 16pt;
+    font-size: 14pt;
 }
 
 @media only screen and (max-width: 1400px){

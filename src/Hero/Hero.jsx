@@ -1,6 +1,7 @@
 import "./Hero.css"
 import SplitText from "../ReactBits/SplitText"
 import DotGrid from "../ReactBits/DotGrid"
+import LightPillar from "../ReactBits/LightPillar"
 
 export default function Hero() {
 
@@ -8,17 +9,31 @@ export default function Hero() {
         <div className='wrapper hero' id='hero'>
 
             <div className="herobg">
-                <DotGrid
+                <LightPillar
+                    topColor="#5227FF"
+                    bottomColor="#FF9FFC"
+                    intensity={0.7}
+                    rotationSpeed={0.3}
+                    glowAmount={0.002}
+                    pillarWidth={3}
+                    pillarHeight={0.4}
+                    noiseIntensity={0.5}
+                    pillarRotation={110}
+                    interactive={false}
+                    mixBlendMode="screen"
+                    quality="high"
+                />
+                {/* <DotGrid
                     dotSize={2}
-                    gap={8}
+                    gap={2}
                     baseColor={"#1a1a1a"}
                     activeColor="#4c1aff"
-                    proximity={120}
-                    shockRadius={250}
-                    shockStrength={5}
-                    resistance={750}
-                    returnDuration={1.5}
-                />
+                    proximity={0}
+                    shockRadius={0}
+                    shockStrength={0}
+                    resistance={0}
+                    returnDuration={0}
+                /> */}
             </div>
 
             <div className="herointro">
@@ -56,14 +71,14 @@ export default function Hero() {
 
                 <div className="btnGroup">
                     <a href="./resume.pdf" target="_blank">
-                    <button className="button">
-                        Resume
-                    </button>
+                        <button className="button">
+                            Resume
+                        </button>
                     </a>
                     <a href="#about">
-                    <button className="button">
-                        About Me
-                    </button>
+                        <button className="button">
+                            About Me
+                        </button>
                     </a>
                 </div>
 

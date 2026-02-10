@@ -23,12 +23,12 @@
   align-items: center;
 }
 
-.herointro > h1 {
+.herointro>h1 {
   font-weight: 600;
   font-size: 4rem;
 }
 
-.herointro > p {
+.herointro>p {
   width: 60ch;
   max-width: 90%;
   color: var(--grey);
@@ -47,6 +47,15 @@
   transition-duration: 200ms;
 
   padding: 20px 40px;
+
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  position: relative;
+  overflow: hidden;
+
 }
 
 .hero button:hover {
@@ -63,7 +72,7 @@
     width: 100%;
   }
 
-  .herointro > h1 {
+  .herointro>h1 {
     font-weight: 600;
     font-size: 3rem;
   }
