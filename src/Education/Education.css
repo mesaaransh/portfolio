@@ -19,6 +19,7 @@
 .educont {
     width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     gap: 60px;
 
@@ -27,7 +28,7 @@
 
 .edu,
 .work {
-    width: 60%;
+    width: 100%;
     background-color: var(--dgrey);
 
     border-radius: 10px;
@@ -51,6 +52,22 @@
     border-radius: 0px 10px 10px 0px;
     border-left: 4px solid var(--lldgrey);
     transition-duration: 200ms;
+}
+
+.educompany{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.compicon{
+    width: 30px;
+    aspect-ratio: 1;
+
+    border-radius: 5px;
+    background-color: aliceblue;
+    object-fit: cover;
 }
 
 .eduitem:hover{

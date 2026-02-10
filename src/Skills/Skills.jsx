@@ -27,6 +27,7 @@ import jenkins from "./assets/jenkins.png"
 import docker from "./assets/docker.png"
 import kubernetes from "./assets/kubernetes.png"
 import AnimatedContent from '../ReactBits/AnimatedContent'
+import java from "./assets/java.png"
 
 
 function toSentenceCase(str) {
@@ -39,7 +40,7 @@ function toSentenceCase(str) {
 
 export default function Skills() {
 
-    const languages = [c, cpp, javascript, python, html, css]
+    const languages = [c, cpp, javascript, python, html, css, java]
     const Frontend = [nextjs, react, django]
     const Backend = [nodejs, express, django, graphql]
     const devops = [git, github, jenkins, docker, kubernetes]
