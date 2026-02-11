@@ -40,7 +40,7 @@ function toSentenceCase(str) {
 
 export default function Skills() {
 
-    const languages = [c, cpp, javascript, python, html, css, java]
+    const languages = [c, cpp, javascript, java, python, html, css]
     const Frontend = [nextjs, react, django]
     const Backend = [nodejs, express, django, graphql]
     const devops = [git, github, jenkins, docker, kubernetes]
@@ -55,6 +55,7 @@ export default function Skills() {
         [c]: "C",
         [cpp]: "C++",
         [javascript]: "JavaScript",
+        [java]: "Java",
         [python]: "Python",
         [html]: "HTML",
         [css]: "CSS",

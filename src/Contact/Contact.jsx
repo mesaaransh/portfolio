@@ -67,7 +67,7 @@ export default function Contact() {
 
                 <div className="contacticons">
 
-                    <ContactItem icon={faPhone} text={"+91 84276-003331"} />
+                    {/* <ContactItem icon={faPhone} text={"+91 84276-003331"} /> */}
                     <ContactItem icon={faMailBulk} text={"mesaaransh@gmail.com"} />
                     <ContactItem icon={faGithub} text={"mesaaransh"} />
                     <ContactItem icon={faLocationPin} text={"Ludhiana, Punjab"} />
